@@ -32,6 +32,9 @@ Use motion com presença e propósito:
 - Texto digitando em comandos.
 - Cursor piscando.
 - Janelas com barra superior estilo OS.
+- Terminal Linux interativo, não modal, acionado por botão e por `Ctrl/Cmd+K`.
+- Comandos reais de navegação e ação: `help`, `ls`, `go tcc`, `go projetos`, `go hobbies`, `copy email`, `open github`, `download cv`, `clear`.
+- Histórico com setas, autocomplete com Tab e respostas em formato de stdout.
 - Cards que parecem processos abrindo.
 - Hover com brilho, borda ativa e leve deslocamento.
 - Scroll reveal com entrada progressiva.

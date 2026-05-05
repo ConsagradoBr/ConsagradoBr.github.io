@@ -85,6 +85,219 @@ async function loadProjects() {
 }
 loadProjects();
 
+const terminalTrigger = document.querySelector("#terminalTrigger");
+const linuxTerminal = document.querySelector("#linuxTerminal");
+const terminalClose = document.querySelector("#terminalClose");
+const terminalOutput = document.querySelector("#terminalOutput");
+const terminalForm = document.querySelector("#terminalForm");
+const terminalInput = document.querySelector("#terminalInput");
+const toast = document.querySelector("#toast");
+const EMAIL = "quesede.filipe@gmail.com";
+let terminalHistory = [];
+let historyIndex = 0;
+
+const terminalCommands = {
+  help: {
+    description: "Lista comandos disponíveis",
+    run: () => `
+      <p>Comandos disponíveis:</p>
+      <div class="terminal-table">
+        <code>help</code><span>mostra esta lista</span>
+        <code>ls</code><span>lista diretórios do portfólio</span>
+        <code>go tcc</code><span>navega para a apresentação do TCC</span>
+        <code>go projetos</code><span>navega para projetos úteis</span>
+        <code>go hobbies</code><span>navega para os playgrounds</span>
+        <code>go contato</code><span>navega para contato</span>
+        <code>open github</code><span>abre o GitHub</span>
+        <code>open linkedin</code><span>abre o LinkedIn</span>
+        <code>copy email</code><span>copia o email</span>
+        <code>download cv</code><span>abre o currículo PDF</span>
+        <code>clear</code><span>limpa o terminal</span>
+      </div>
+      <p class="terminal-muted">Dica: Ctrl/Cmd+K abre ou foca este terminal. Esc fecha.</p>
+    `
+  },
+  ls: {
+    description: "Lista seções",
+    run: () => `
+      <p>drwxr-xr-x historia/</p>
+      <p>drwxr-xr-x tcc/</p>
+      <p>drwxr-xr-x projetos/</p>
+      <p>drwxr-xr-x hobbies/</p>
+      <p>drwxr-xr-x stack/</p>
+      <p>drwxr-xr-x contato/</p>
+      <p>-rw-r--r-- curriculo-quesede-filipe-constantino.pdf</p>
+    `
+  },
+  whoami: {
+    description: "Resumo profissional",
+    run: () => `
+      <p>Quésede Filipe Constantino</p>
+      <p>Desenvolvedor em formação, com base em operação administrativa, automação, ERP, dados e front-end.</p>
+    `
+  },
+  pwd: {
+    description: "Mostra caminho atual",
+    run: () => "<p>/home/qfc/portfolio</p>"
+  },
+  clear: {
+    description: "Limpa terminal",
+    run: () => {
+      terminalOutput.innerHTML = "";
+      return "";
+    }
+  }
+};
+
+const terminalActions = [
+  { match: ["go historia", "cd historia", "historia"], run: () => scrollToSection("historia", "Abrindo ~/história") },
+  { match: ["go tcc", "cd tcc", "tcc"], run: () => scrollToSection("tcc", "Abrindo ~/tcc") },
+  { match: ["go projetos", "cd projetos", "projetos"], run: () => scrollToSection("projetos", "Abrindo ~/projetos") },
+  { match: ["go hobbies", "cd hobbies", "hobbies", "go labs"], run: () => scrollToSection("labs", "Abrindo ~/hobbies") },
+  { match: ["go stack", "cd stack", "stack"], run: () => scrollToSection("stack", "Abrindo ~/stack") },
+  { match: ["go contato", "cd contato", "contato"], run: () => scrollToSection("contato", "Abrindo ~/contato") },
+  { match: ["open github", "github"], run: () => openExternal("https://github.com/ConsagradoBr", "Abrindo GitHub") },
+  { match: ["open linkedin", "linkedin"], run: () => openExternal("https://www.linkedin.com/in/srconsagrado/", "Abrindo LinkedIn") },
+  { match: ["open tcc", "repo tcc"], run: () => openExternal("https://github.com/ConsagradoBr/tcc-erp-usinagem", "Abrindo repositório do TCC") },
+  { match: ["copy email", "email"], run: () => copyText(EMAIL, "Email copiado") },
+  { match: ["copy link", "link"], run: () => copyText(window.location.href, "Link copiado") },
+  { match: ["download cv", "cat curriculo", "curriculo", "cv"], run: () => {
+    window.open("assets/docs/curriculo-quesede-filipe-constantino.pdf", "_blank");
+    return "<p>abrindo assets/docs/curriculo-quesede-filipe-constantino.pdf</p>";
+  } }
+];
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.hidden = false;
+  window.clearTimeout(showToast.timer);
+  showToast.timer = window.setTimeout(() => {
+    toast.hidden = true;
+  }, 2200);
+}
+
+async function copyText(text, message) {
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast(message);
+    return `<p>${message}: <code>${text}</code></p>`;
+  } catch {
+    return `<p class="terminal-error">Não consegui copiar automaticamente. Valor: <code>${text}</code></p>`;
+  }
+}
+
+function scrollToSection(id, message) {
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  return `<p>${message}</p>`;
+}
+
+function openExternal(url, message) {
+  window.open(url, "_blank", "noreferrer");
+  return `<p>${message}: <code>${url}</code></p>`;
+}
+
+function appendTerminal(html) {
+  terminalOutput.insertAdjacentHTML("beforeend", html);
+  terminalOutput.scrollTop = terminalOutput.scrollHeight;
+}
+
+function normalizeCommand(value) {
+  return value.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+function runTerminalCommand(rawCommand) {
+  const command = normalizeCommand(rawCommand);
+  if (!command) return;
+  appendTerminal(`<p class="terminal-command">qfc@portfolio:~$ ${rawCommand}</p>`);
+  terminalHistory.push(rawCommand);
+  historyIndex = terminalHistory.length;
+
+  if (terminalCommands[command]) {
+    const output = terminalCommands[command].run();
+    if (output) appendTerminal(output);
+    return;
+  }
+
+  const action = terminalActions.find((item) => item.match.includes(command));
+  if (action) {
+    Promise.resolve(action.run()).then((output) => {
+      if (output) appendTerminal(output);
+    });
+    return;
+  }
+
+  appendTerminal(`<p class="terminal-error">command not found: ${rawCommand}</p><p class="terminal-muted">Digite <code>help</code> para ver comandos.</p>`);
+}
+
+function openTerminal() {
+  linuxTerminal.hidden = false;
+  terminalTrigger.setAttribute("aria-expanded", "true");
+  if (!terminalOutput.dataset.booted) {
+    terminalOutput.dataset.booted = "true";
+    appendTerminal(`
+      <p class="terminal-command">Linux qfc-os 6.5.0-portfolio #1 SMP PREEMPT_DYNAMIC</p>
+      <p>Bem-vindo ao terminal do portfólio.</p>
+      <p class="terminal-muted">Digite <code>help</code> para navegar por comandos.</p>
+    `);
+  }
+  window.setTimeout(() => terminalInput.focus(), 30);
+}
+
+function closeTerminal() {
+  linuxTerminal.hidden = true;
+  terminalTrigger.setAttribute("aria-expanded", "false");
+  terminalTrigger.focus();
+}
+
+function toggleTerminal() {
+  if (linuxTerminal.hidden) openTerminal();
+  else closeTerminal();
+}
+
+terminalTrigger.addEventListener("click", toggleTerminal);
+terminalClose.addEventListener("click", closeTerminal);
+terminalForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const command = terminalInput.value;
+  terminalInput.value = "";
+  runTerminalCommand(command);
+});
+terminalInput.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowUp") {
+    event.preventDefault();
+    historyIndex = Math.max(0, historyIndex - 1);
+    terminalInput.value = terminalHistory[historyIndex] || "";
+  }
+  if (event.key === "ArrowDown") {
+    event.preventDefault();
+    historyIndex = Math.min(terminalHistory.length, historyIndex + 1);
+    terminalInput.value = terminalHistory[historyIndex] || "";
+  }
+  if (event.key === "Tab") {
+    event.preventDefault();
+    const value = normalizeCommand(terminalInput.value);
+    const options = [
+      ...Object.keys(terminalCommands),
+      ...terminalActions.flatMap((item) => item.match)
+    ];
+    const suggestion = options.find((option) => option.startsWith(value));
+    if (suggestion) terminalInput.value = suggestion;
+  }
+});
+document.addEventListener("keydown", (event) => {
+  const isCommandShortcut = (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k";
+  if (isCommandShortcut) {
+    event.preventDefault();
+    toggleTerminal();
+  }
+  if (event.key === "Escape" && !linuxTerminal.hidden) {
+    closeTerminal();
+  }
+});
+if (window.location.hash === "#terminal") {
+  openTerminal();
+}
+
 const canvas = document.querySelector("#signalCanvas");
 const ctx = canvas.getContext("2d");
 let width = 0;

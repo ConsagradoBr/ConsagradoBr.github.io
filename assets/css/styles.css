@@ -67,7 +67,7 @@ a { color: inherit; }
   backdrop-filter: blur(18px);
 }
 .site-header.scrolled { border-color: var(--line); }
-.brand, .header-action, nav a, .button {
+.brand, .header-action, nav a, .button, .command-trigger {
   font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 600;
@@ -79,7 +79,34 @@ a { color: inherit; }
 nav { display: flex; justify-content: center; gap: 28px; }
 nav a { color: var(--muted); transition: color .2s; }
 nav a:hover { color: var(--ink); }
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .header-action { color: var(--bg); background: var(--green); padding: 10px 14px; border-radius: 6px; box-shadow: 0 0 26px rgba(108, 255, 154, .22); }
+.command-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  color: var(--ink);
+  background: rgba(11, 16, 13, .72);
+  cursor: pointer;
+}
+kbd {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 2px 5px;
+  color: var(--green);
+  background: rgba(108, 255, 154, .08);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 1.2;
+}
 .hero {
   position: relative;
   min-height: 100svh;
@@ -433,6 +460,110 @@ footer {
   font-family: var(--font-mono);
   font-size: 12px;
 }
+.linux-terminal {
+  position: fixed;
+  z-index: 19;
+  top: 78px;
+  left: clamp(12px, 4vw, 56px);
+  right: clamp(12px, 4vw, 56px);
+  max-height: min(430px, calc(100svh - 100px));
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(3, 6, 4, .985);
+  backdrop-filter: blur(12px);
+  animation: terminal-drop .22s var(--ease);
+}
+.linux-terminal .window-bar {
+  cursor: default;
+}
+.linux-terminal .window-bar strong {
+  flex: 1;
+}
+#terminalClose {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, .04);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+}
+#terminalClose:hover {
+  color: var(--ink);
+  border-color: var(--danger);
+}
+.terminal-output {
+  min-height: 180px;
+  max-height: min(300px, calc(100svh - 220px));
+  overflow: auto;
+  padding: 18px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.terminal-output p {
+  margin: 0 0 8px;
+}
+.terminal-output .terminal-command {
+  color: var(--green);
+}
+.terminal-output .terminal-error {
+  color: var(--danger);
+}
+.terminal-output .terminal-muted {
+  color: var(--low);
+}
+.terminal-output .terminal-table {
+  display: grid;
+  grid-template-columns: minmax(120px, 180px) 1fr;
+  gap: 6px 16px;
+  margin: 10px 0 14px;
+}
+.terminal-output code {
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+.terminal-input-line {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding: 14px 18px;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.terminal-input-line input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  color: var(--ink);
+  background: transparent;
+  font: inherit;
+}
+.terminal-input-line input::placeholder { color: var(--low); }
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 80;
+  max-width: min(360px, calc(100% - 40px));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  color: var(--ink);
+  background: rgba(11, 16, 13, .94);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, .32);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  animation: toast-in .2s var(--ease);
+}
+@keyframes terminal-drop { from { opacity: 0; transform: translateY(-14px) scale(.99); } to { opacity: 1; transform: translateY(0) scale(1); } }
+@keyframes toast-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
 .reveal.visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
@@ -449,6 +580,19 @@ footer {
 @media (max-width: 560px) {
   h1 { font-size: clamp(40px, 12.5vw, 50px); }
   .header-action { display: none; }
+  .command-trigger span { display: none; }
+  .linux-terminal {
+    top: 70px;
+    left: 9px;
+    right: 9px;
+  }
+  .terminal-output {
+    min-height: 230px;
+  }
+  .terminal-output .terminal-table,
+  .terminal-input-line {
+    grid-template-columns: 1fr;
+  }
   .boot-strip { display: none; }
   .contact-links a { grid-template-columns: 1fr; gap: 8px; }
   footer { flex-direction: column; }
