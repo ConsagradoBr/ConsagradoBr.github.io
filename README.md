@@ -8,9 +8,15 @@ Site principal: https://consagradobr.github.io/
 
 ## Projetos destacados
 
+- TCC ERP Usinagem: https://github.com/ConsagradoBr/tcc-erp-usinagem
 - AI Fit Lab: https://github.com/ConsagradoBr/qfc-ai-fit-lab
 - Automation Command Center: https://github.com/ConsagradoBr/qfc-automation-command-center
 - Front-End Atelier: https://github.com/ConsagradoBr/qfc-front-end-atelier
+- Math Terminal: https://github.com/ConsagradoBr/qfc-math-terminal
+- Design Token Forge: https://github.com/ConsagradoBr/qfc-design-token-forge
+- Cyber Defense Lab: https://github.com/ConsagradoBr/qfc-cyber-defense-lab
+- Marketing Console: https://github.com/ConsagradoBr/qfc-marketing-console
+- Investment Sandbox: https://github.com/ConsagradoBr/qfc-investment-sandbox
 
 ## Estrutura
 

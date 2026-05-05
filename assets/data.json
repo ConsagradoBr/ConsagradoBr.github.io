@@ -30,5 +30,57 @@
       "impact": "Demonstra front-end aplicado a negócios reais, com foco em clareza, responsividade e entrega utilizável.",
       "stack": ["HTML", "CSS", "JavaScript", "Exportação"]
     }
+  ],
+  "labs": [
+    {
+      "name": "Math Terminal",
+      "theme": "Matemática",
+      "status": "Hobby",
+      "href": "https://consagradobr.github.io/qfc-math-terminal/",
+      "repo": "https://github.com/ConsagradoBr/qfc-math-terminal",
+      "description": "Console para fatoração, conversão numérica e desafios rápidos de aritmética.",
+      "impact": "Brinca com lógica, números e interface de terminal.",
+      "stack": ["JavaScript", "Math", "Terminal UI"]
+    },
+    {
+      "name": "Design Token Forge",
+      "theme": "Designer",
+      "status": "Hobby",
+      "href": "https://consagradobr.github.io/qfc-design-token-forge/",
+      "repo": "https://github.com/ConsagradoBr/qfc-design-token-forge",
+      "description": "Gerador visual de tokens CSS para cor, raio e densidade de interface.",
+      "impact": "Mostra sensibilidade visual e organização de sistemas de design.",
+      "stack": ["CSS Tokens", "Color", "UI"]
+    },
+    {
+      "name": "Cyber Defense Lab",
+      "theme": "Cibersegurança",
+      "status": "Hobby defensivo",
+      "href": "https://consagradobr.github.io/qfc-cyber-defense-lab/",
+      "repo": "https://github.com/ConsagradoBr/qfc-cyber-defense-lab",
+      "description": "Checklist defensivo com avaliação de senha, sinais de phishing e scanner simples de logs.",
+      "impact": "Segurança tratada como prática preventiva, educativa e responsável.",
+      "stack": ["Security", "Logs", "Checklist"]
+    },
+    {
+      "name": "Marketing Console",
+      "theme": "Marketing",
+      "status": "Hobby",
+      "href": "https://consagradobr.github.io/qfc-marketing-console/",
+      "repo": "https://github.com/ConsagradoBr/qfc-marketing-console",
+      "description": "Gerador de campanha, headline, copy e URL com parâmetros UTM.",
+      "impact": "Explora programação aplicada a distribuição, posicionamento e conteúdo.",
+      "stack": ["Copy", "UTM", "Growth"]
+    },
+    {
+      "name": "Investment Sandbox",
+      "theme": "Investimentos",
+      "status": "Hobby educativo",
+      "href": "https://consagradobr.github.io/qfc-investment-sandbox/",
+      "repo": "https://github.com/ConsagradoBr/qfc-investment-sandbox",
+      "description": "Simulador educacional de juros compostos com gráfico simples de evolução.",
+      "impact": "Une matemática financeira, visualização e aviso claro de que não é recomendação.",
+      "stack": ["Finance Math", "Chart", "Educação"]
+    }
   ]
 }

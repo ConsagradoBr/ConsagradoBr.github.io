@@ -1,12 +1,10 @@
-# Prompt Senior Para Evoluir o Portfólio
+# Prompt Senior Para Evoluir o Portfólio QFC OS
 
-Bom dia.
+Quero construir e evoluir meu portfólio profissional como um produto digital vivo, com identidade de terminal/sistema operacional. O objetivo é criar algo singular, profissional, memorável e atemporal: uma experiência que pareça um pequeno OS de programador, conte minha história, mostre minha evolução técnica e deixe uma impressão forte em empresas, recrutadores e contratantes.
 
-Quero construir meu portfólio profissional como um produto digital vivo, não como uma página estática. O objetivo é criar algo singular, profissional e atemporal: uma experiência que conte minha história, mostre minha evolução técnica e deixe uma impressão forte em empresas, recrutadores e contratantes.
+## Contexto Profissional
 
-## Contexto
-
-Meu nome é Quésede Filipe Constantino. Sou de Mogi Mirim - SP, estou cursando Técnico em Desenvolvimento de Sistemas com previsão de conclusão em dezembro de 2026 e venho de uma trajetória prática: voluntariado técnico, almoxarifado, apoio operacional, administração industrial, compras, contratos, financeiro, Excel avançado, ERP e agora desenvolvimento de sistemas.
+Meu nome é Quésede Filipe Constantino. Sou de Mogi Mirim - SP, estou cursando Técnico em Desenvolvimento de Sistemas com previsão de conclusão em dezembro de 2026 e venho de uma trajetória prática: voluntariado técnico, almoxarifado, apoio operacional, administração industrial, compras, contratos, financeiro, Excel avançado, ERP e desenvolvimento de sistemas.
 
 Recursos disponíveis:
 
@@ -15,41 +13,87 @@ Recursos disponíveis:
 - Instagram: https://www.instagram.com/constantino_pkn/
 - Currículo em PDF
 - Certificado de ensino médio como referência histórica, sem publicar dados sensíveis
-- Projeto visual de referência: https://github.com/Animmaster/Dexter-Morgan-Portfolio/tree/main
+- TCC: ERP para Usinagem Industrial em desenvolvimento
 - Referência de motion: https://www.vev.design/blog/landing-page-animation/
 
 ## Direção Criativa
 
-O portfólio deve parecer construído por alguém que entende o mundo real antes de automatizá-lo. A narrativa principal é: operação, processo, código e solução.
+Tema principal: terminal, sistema operacional, console, boot sequence, logs, janelas de desktop, comandos digitando, cursores piscando, pequenos estados de sistema, prompts, arquivos, processos, rotas, módulos e sensação de programador usando um OS próprio.
 
-Use motion com propósito: animações de entrada, scroll reveal, microinterações e transições que ajudem a guiar a leitura. Evite animação decorativa excessiva. O visual deve ser marcante, mas legível, rápido e profissional.
+A narrativa principal é: operação real -> processo -> código -> sistema útil.
 
-## Entregáveis
+O portfólio deve parecer construído por alguém que entende o mundo real antes de automatizá-lo. O visual pode ser divertido, mas precisa continuar profissional. Evite estética hacker caricata. Use terminal como linguagem de interface, não como fantasia.
 
-1. Criar uma versão mockada/publicável do portfólio.
-2. Estruturar os arquivos em HTML, CSS, JS, dados e assets.
-3. Criar três projetos úteis, funcionais e demonstráveis:
-   - Projeto 1: tema AI.
-   - Projeto 2: tema Automação, incluindo n8n quando fizer sentido.
-   - Projeto 3: tema Website/frontend.
-4. Cada projeto precisa ter README, Git local, demo funcional e link dentro do portfólio.
-5. O portfólio deve mostrar:
-   - História profissional em linha do tempo.
-   - Evolução técnica.
-   - Stack.
-   - Projetos com impacto, não apenas lista de tecnologias.
-   - Contato e currículo.
-6. Preparar para publicação no GitHub Pages.
+## Motion E Interações
+
+Use motion com presença e propósito:
+
+- Boot sequence no hero.
+- Texto digitando em comandos.
+- Cursor piscando.
+- Janelas com barra superior estilo OS.
+- Cards que parecem processos abrindo.
+- Hover com brilho, borda ativa e leve deslocamento.
+- Scroll reveal com entrada progressiva.
+- Canvas ou plano de fundo com grid, pontos, sinais ou tráfego de sistema.
+- Transições entre seções que pareçam navegação por diretórios.
+- Respeitar `prefers-reduced-motion`.
+
+Evite animação que atrapalhe leitura, cause confusão ou pareça decoração sem função.
+
+## Estrutura Do Portfólio
+
+O portfólio deve conter:
+
+1. Hero em estilo terminal/OS.
+2. História profissional em linha do tempo.
+3. Seção do TCC como projeto em desenvolvimento, com apresentação clara:
+   - problema
+   - objetivo
+   - stack
+   - módulos
+   - status atual
+   - fluxo principal
+   - próximos passos
+4. Projetos úteis e funcionais:
+   - AI
+   - Automação/n8n
+   - Website/frontend
+5. Projetos hobby/playgrounds:
+   - matemática
+   - design
+   - cibersegurança defensiva
+   - marketing
+   - investimentos educacionais
+6. Stack técnica.
+7. Contato e currículo.
+
+## Projetos
+
+Cada projeto deve ter:
+
+- demo funcional publicada
+- repositório GitHub
+- README claro
+- tema e objetivo
+- impacto explicado em linguagem de negócio
+- tecnologia usada sem exagero
+
+Projetos úteis precisam parecer soluções reais. Projetos hobby precisam parecer brincadeiras inteligentes de programador, sem perder qualidade.
 
 ## Critérios De Qualidade
 
 - Responsivo em mobile e desktop.
-- Sem vazamento de dados sensíveis de documentos pessoais.
-- Acessível: HTML semântico, contraste, navegação clara e suporte a `prefers-reduced-motion`.
-- Performance simples: sem dependências pesadas sem necessidade.
-- Conteúdo honesto: não inventar experiências, cargos ou resultados que não existam.
-- Estrutura evolutiva: deve ser fácil adicionar novas fases da carreira, novos projetos e novas habilidades.
+- HTML semântico.
+- Contraste adequado.
+- Sem vazamento de RG, data de nascimento ou documentos pessoais.
+- Performance simples, sem dependências pesadas sem necessidade.
+- Conteúdo honesto: não inventar experiências, cargos ou resultados.
+- Estrutura evolutiva: fácil adicionar novas fases da carreira, novos projetos e novas habilidades.
+- Publicação via GitHub Pages.
 
 ## Papel Da IA
 
-Atue como uma equipe senior composta por: diretor criativo, engenheiro front-end, engenheiro de produto, revisor de conteúdo, especialista em acessibilidade, QA e especialista de publicação. Antes de implementar, analise os recursos existentes, identifique riscos e preserve privacidade. Depois implemente, teste, documente e deixe pronto para publicação.
+Atue como uma equipe senior composta por diretor criativo, engenheiro front-end, engenheiro de produto, revisor de conteúdo, especialista em acessibilidade, QA e especialista de publicação.
+
+Antes de implementar, analise os recursos existentes, identifique riscos, preserve privacidade e confira o estado dos repositórios. Depois implemente, teste localmente, valide responsividade, publique, documente e entregue um resumo claro com links.
