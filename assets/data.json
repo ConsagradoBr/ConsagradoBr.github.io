@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "name": "AI Fit Lab",
+      "theme": "AI",
+      "status": "Funcional",
+      "href": "https://consagradobr.github.io/qfc-ai-fit-lab/",
+      "repo": "https://github.com/ConsagradoBr/qfc-ai-fit-lab",
+      "description": "Ferramenta que compara uma vaga com o perfil profissional, calcula aderência e gera um plano de candidatura.",
+      "impact": "Mostra raciocínio de produto, uso prático de IA/rubricas e atenção a processos de contratação.",
+      "stack": ["JavaScript", "NLP leve", "LocalStorage", "UX"]
+    },
+    {
+      "name": "Automation Command Center",
+      "theme": "Automação + n8n",
+      "status": "Funcional",
+      "href": "https://consagradobr.github.io/qfc-automation-command-center/",
+      "repo": "https://github.com/ConsagradoBr/qfc-automation-command-center",
+      "description": "Painel que transforma CSV administrativo em fila priorizada, relatório e blueprint de workflow n8n.",
+      "impact": "Conecta compras, contratos, financeiro e alertas automatizados em uma entrega simples de demonstrar.",
+      "stack": ["JavaScript", "CSV", "n8n JSON", "Automação"]
+    },
+    {
+      "name": "Front-End Atelier",
+      "theme": "Website/frontend",
+      "status": "Funcional",
+      "href": "https://consagradobr.github.io/qfc-front-end-atelier/",
+      "repo": "https://github.com/ConsagradoBr/qfc-front-end-atelier",
+      "description": "Construtor visual para landing pages responsivas com preview em tempo real e exportação HTML.",
+      "impact": "Demonstra front-end aplicado a negócios reais, com foco em clareza, responsividade e entrega utilizável.",
+      "stack": ["HTML", "CSS", "JavaScript", "Exportação"]
+    }
+  ]
+}
