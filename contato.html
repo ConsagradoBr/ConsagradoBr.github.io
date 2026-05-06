@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contato, redes e currículo de Quésede Filipe Constantino.">
+  <title>QFC OS | Contato</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html">qfc-os</a>
+    <nav aria-label="Principal"><a href="historia.html">~/história</a><a href="tcc.html">~/tcc</a><a href="projetos.html">~/projetos</a><a href="hobbies.html">~/hobbies</a><a href="stack.html">~/stack</a><a href="contato.html">~/contato</a></nav>
+    <div class="header-tools"><button class="command-trigger" id="terminalTrigger" type="button" aria-label="Abrir terminal Linux" aria-controls="linuxTerminal" aria-expanded="false"><span>Terminal</span><kbd>Ctrl</kbd><kbd>K</kbd></button><a class="header-action" href="assets/docs/curriculo-quesede-filipe-constantino.pdf">cat currículo.pdf</a></div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero reveal">
+      <div>
+        <p class="eyebrow">qfc@portfolio:~/contato$ ssh empresas@qfc</p>
+        <h1>Contato</h1>
+        <p class="page-lead">Canais para conversar sobre vagas, contratos, projetos, TCC ou evolução do portfólio.</p>
+      </div>
+      <aside class="content-card"><span>atalho</span><strong>Ctrl/Cmd+K</strong><p>Abra o terminal e use <code>copy email</code>, <code>open github</code> ou <code>download cv</code>.</p></aside>
+    </section>
+
+    <section class="contact reveal" aria-label="Links de contato">
+      <div class="contact-links">
+        <a href="mailto:quesede.filipe@gmail.com"><span>Email</span><strong>quesede.filipe@gmail.com</strong></a>
+        <a href="https://github.com/ConsagradoBr" target="_blank" rel="noreferrer"><span>GitHub</span><strong>github.com/ConsagradoBr</strong></a>
+        <a href="https://www.linkedin.com/in/srconsagrado/" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>linkedin.com/in/srconsagrado</strong></a>
+        <a href="https://www.instagram.com/constantino_pkn/" target="_blank" rel="noreferrer"><span>Instagram</span><strong>@constantino_pkn</strong></a>
+        <a href="assets/docs/curriculo-quesede-filipe-constantino.pdf"><span>Currículo</span><strong>curriculo-quesede-filipe-constantino.pdf</strong></a>
+      </div>
+      <article class="terminal-window tcc-terminal">
+        <div class="window-bar"><span></span><span></span><span></span><strong>mensagem.txt</strong></div>
+        <p class="command">$ objetivo</p>
+        <p>Entrar em projetos onde eu possa unir rotina real, organização de processos e desenvolvimento de sistemas úteis.</p>
+        <p class="command">$ resposta</p>
+        <p>Disponível para conversar sobre estágio, oportunidade júnior, projetos web, automações e sistemas internos.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer><span>qfc-os portfolio</span><span>shutdown -h later | © 2026 Quésede Filipe Constantino</span></footer>
+  <section class="linux-terminal terminal-window" id="linuxTerminal" aria-label="Terminal de comandos do portfólio" hidden>
+    <div class="window-bar"><span></span><span></span><span></span><strong>qfc@portfolio:~/contato</strong><button id="terminalClose" type="button" aria-label="Fechar terminal">×</button></div>
+    <div class="terminal-output" id="terminalOutput" aria-live="polite"></div>
+    <form class="terminal-input-line" id="terminalForm"><label for="terminalInput">qfc@portfolio:~$</label><input id="terminalInput" type="text" autocomplete="off" spellcheck="false" placeholder="digite help"></form>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

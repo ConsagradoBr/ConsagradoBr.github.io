@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projetos hobby e playgrounds de programação de Quésede Filipe Constantino.">
+  <title>QFC OS | Hobbies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html">qfc-os</a>
+    <nav aria-label="Principal"><a href="historia.html">~/história</a><a href="tcc.html">~/tcc</a><a href="projetos.html">~/projetos</a><a href="hobbies.html">~/hobbies</a><a href="stack.html">~/stack</a><a href="contato.html">~/contato</a></nav>
+    <div class="header-tools"><button class="command-trigger" id="terminalTrigger" type="button" aria-label="Abrir terminal Linux" aria-controls="linuxTerminal" aria-expanded="false"><span>Terminal</span><kbd>Ctrl</kbd><kbd>K</kbd></button><a class="header-action" href="assets/docs/curriculo-quesede-filipe-constantino.pdf">cat currículo.pdf</a></div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero reveal">
+      <div>
+        <p class="eyebrow">qfc@portfolio:~/hobbies$ ./brincar-de-programador</p>
+        <h1>Hobbies</h1>
+        <p class="page-lead">Playgrounds funcionais para matemática, design, cibersegurança defensiva, marketing e investimentos educacionais.</p>
+      </div>
+      <aside class="content-card"><span>intenção</span><strong>brincadeira com acabamento</strong><p>Projetos menores, mas completos o suficiente para demonstrar curiosidade, lógica e cuidado visual.</p></aside>
+    </section>
+
+    <section class="project-grid lab-grid" id="labGrid" aria-label="Projetos hobby"></section>
+  </main>
+
+  <footer><span>qfc-os portfolio</span><span>shutdown -h later | © 2026 Quésede Filipe Constantino</span></footer>
+  <section class="linux-terminal terminal-window" id="linuxTerminal" aria-label="Terminal de comandos do portfólio" hidden>
+    <div class="window-bar"><span></span><span></span><span></span><strong>qfc@portfolio:~/hobbies</strong><button id="terminalClose" type="button" aria-label="Fechar terminal">×</button></div>
+    <div class="terminal-output" id="terminalOutput" aria-live="polite"></div>
+    <form class="terminal-input-line" id="terminalForm"><label for="terminalInput">qfc@portfolio:~$</label><input id="terminalInput" type="text" autocomplete="off" spellcheck="false" placeholder="digite help"></form>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

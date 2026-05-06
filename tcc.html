@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apresentação do TCC ERP para Usinagem Industrial em desenvolvimento.">
+  <title>QFC OS | TCC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html">qfc-os</a>
+    <nav aria-label="Principal"><a href="historia.html">~/história</a><a href="tcc.html">~/tcc</a><a href="projetos.html">~/projetos</a><a href="hobbies.html">~/hobbies</a><a href="stack.html">~/stack</a><a href="contato.html">~/contato</a></nav>
+    <div class="header-tools"><button class="command-trigger" id="terminalTrigger" type="button" aria-label="Abrir terminal Linux" aria-controls="linuxTerminal" aria-expanded="false"><span>Terminal</span><kbd>Ctrl</kbd><kbd>K</kbd></button><a class="header-action" href="assets/docs/curriculo-quesede-filipe-constantino.pdf">cat currículo.pdf</a></div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero reveal" aria-label="TCC">
+      <div>
+        <p class="eyebrow">qfc@portfolio:~/tcc$ ./apresentar-mvp.sh</p>
+        <h1>TCC ERP</h1>
+        <p class="page-lead">Projeto em desenvolvimento: um ERP para usinagem industrial, pensado para organizar orçamento, ordem de serviço, produção, estoque e acompanhamento.</p>
+        <div class="page-actions">
+          <a class="button primary" href="https://github.com/ConsagradoBr/tcc-erp-usinagem" target="_blank" rel="noreferrer">open repo</a>
+          <a class="button ghost" href="projetos.html">ver projetos</a>
+        </div>
+      </div>
+      <aside class="content-card">
+        <span>status</span>
+        <strong>em desenvolvimento</strong>
+        <p>O objetivo da apresentação é mostrar raciocínio de sistema: problema, módulos, fluxo principal, decisões e próximos passos.</p>
+      </aside>
+    </section>
+
+    <section class="tcc-board reveal" aria-label="Detalhes do TCC">
+      <article class="tcc-terminal terminal-window">
+        <div class="window-bar"><span></span><span></span><span></span><strong>mvp-status.log</strong></div>
+        <p class="command">$ problema</p>
+        <p>Pequenas operações de usinagem podem depender de controles soltos, planilhas e comunicação manual. Isso dificulta rastrear orçamento, produção, estoque e entrega.</p>
+        <p class="command">$ objetivo</p>
+        <p>Criar um sistema organizado, simples de apresentar e evolutivo, com módulos conectados por um fluxo operacional claro.</p>
+        <div class="tcc-actions"><a class="button primary" href="https://github.com/ConsagradoBr/tcc-erp-usinagem" target="_blank" rel="noreferrer">git clone tcc</a><a class="button ghost" href="contato.html">falar sobre o projeto</a></div>
+      </article>
+      <div class="tcc-modules">
+        <article><span>módulo 01</span><strong>Cadastro de clientes, peças e serviços</strong></article>
+        <article><span>módulo 02</span><strong>Orçamentos e aprovação</strong></article>
+        <article><span>módulo 03</span><strong>Ordens de serviço e produção</strong></article>
+        <article><span>módulo 04</span><strong>Estoque, acompanhamento e relatórios</strong></article>
+      </div>
+    </section>
+
+    <section class="reveal" aria-label="Fluxo principal">
+      <div class="section-intro"><p class="eyebrow">~/tcc/fluxo</p><h2>Como o sistema funciona.</h2></div>
+      <div class="flow"><span>cliente</span><span>orçamento</span><span>OS</span><span>produção</span><span>entrega</span></div>
+    </section>
+  </main>
+
+  <footer><span>qfc-os portfolio</span><span>shutdown -h later | © 2026 Quésede Filipe Constantino</span></footer>
+  <section class="linux-terminal terminal-window" id="linuxTerminal" aria-label="Terminal de comandos do portfólio" hidden>
+    <div class="window-bar"><span></span><span></span><span></span><strong>qfc@portfolio:~/tcc</strong><button id="terminalClose" type="button" aria-label="Fechar terminal">×</button></div>
+    <div class="terminal-output" id="terminalOutput" aria-live="polite"></div>
+    <form class="terminal-input-line" id="terminalForm"><label for="terminalInput">qfc@portfolio:~$</label><input id="terminalInput" type="text" autocomplete="off" spellcheck="false" placeholder="digite help"></form>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

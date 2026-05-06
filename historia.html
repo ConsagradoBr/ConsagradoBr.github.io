@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="História profissional de Quésede Filipe Constantino em formato de sistema operacional.">
+  <title>QFC OS | História</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html">qfc-os</a>
+    <nav aria-label="Principal">
+      <a href="historia.html">~/história</a>
+      <a href="tcc.html">~/tcc</a>
+      <a href="projetos.html">~/projetos</a>
+      <a href="hobbies.html">~/hobbies</a>
+      <a href="stack.html">~/stack</a>
+      <a href="contato.html">~/contato</a>
+    </nav>
+    <div class="header-tools">
+      <button class="command-trigger" id="terminalTrigger" type="button" aria-label="Abrir terminal Linux" aria-controls="linuxTerminal" aria-expanded="false"><span>Terminal</span><kbd>Ctrl</kbd><kbd>K</kbd></button>
+      <a class="header-action" href="assets/docs/curriculo-quesede-filipe-constantino.pdf">cat currículo.pdf</a>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero reveal" aria-label="História profissional">
+      <div>
+        <p class="eyebrow">qfc@portfolio:~/historia$ git log --carreira</p>
+        <h1>História</h1>
+        <p class="page-lead">Uma trajetória que começou em operação real e foi se aproximando de sistemas, automação, ERP, dados e desenvolvimento.</p>
+      </div>
+      <aside class="content-card">
+        <span>narrativa</span>
+        <strong>operação -> processo -> código</strong>
+        <p>O diferencial aqui é mostrar que o software nasce de problemas concretos: rotina administrativa, controles, contratos, financeiro, compras e necessidade de organização.</p>
+      </aside>
+    </section>
+
+    <section class="timeline reveal" aria-label="Linha do tempo">
+      <article><span>base</span><h3>Formação humana e disciplina</h3><p>Ensino médio concluído e experiência inicial com responsabilidade, rotina e compromisso.</p></article>
+      <article><span>operação</span><h3>Ambiente real</h3><p>Vivência com almoxarifado, apoio técnico, administrativo e processos de empresas.</p></article>
+      <article><span>gestão</span><h3>Compras, contratos e financeiro</h3><p>Contato com demandas onde organização, prazos, documentos e dados fazem diferença.</p></article>
+      <article><span>sistemas</span><h3>ERP, Excel e automação</h3><p>Percepção de que tarefas repetitivas viram sistemas melhores quando são bem mapeadas.</p></article>
+      <article><span>dev</span><h3>Desenvolvimento de Sistemas</h3><p>Técnico em andamento, projetos publicados e TCC focado em ERP para usinagem industrial.</p></article>
+    </section>
+
+    <section class="content-grid reveal" aria-label="Princípios">
+      <article class="content-card"><span>01</span><strong>Clareza antes de código</strong><p>Entender processo, regra e objetivo antes de escolher tecnologia.</p></article>
+      <article class="content-card"><span>02</span><strong>Ferramenta utilizável</strong><p>Projetos precisam abrir, funcionar e mostrar valor sem depender de explicação longa.</p></article>
+      <article class="content-card"><span>03</span><strong>Evolução contínua</strong><p>O portfólio foi pensado para receber novas fases, módulos e aprendizados sem perder a história.</p></article>
+    </section>
+  </main>
+
+  <footer><span>qfc-os portfolio</span><span>shutdown -h later | © 2026 Quésede Filipe Constantino</span></footer>
+  <section class="linux-terminal terminal-window" id="linuxTerminal" aria-label="Terminal de comandos do portfólio" hidden>
+    <div class="window-bar"><span></span><span></span><span></span><strong>qfc@portfolio:~/historia</strong><button id="terminalClose" type="button" aria-label="Fechar terminal">×</button></div>
+    <div class="terminal-output" id="terminalOutput" aria-live="polite"></div>
+    <form class="terminal-input-line" id="terminalForm"><label for="terminalInput">qfc@portfolio:~$</label><input id="terminalInput" type="text" autocomplete="off" spellcheck="false" placeholder="digite help"></form>
+  </section>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

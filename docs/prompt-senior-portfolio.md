@@ -20,6 +20,8 @@ Recursos disponíveis:
 
 Tema principal: terminal, sistema operacional, console, boot sequence, logs, janelas de desktop, comandos digitando, cursores piscando, pequenos estados de sistema, prompts, arquivos, processos, rotas, módulos e sensação de programador usando um OS próprio.
 
+Paleta principal: usar `#1788D1` como azul de sistema e `#6A33AB` como roxo de destaque. A identidade deve mesclar as duas cores em gradientes, brilho de foco, bordas ativas, botões principais e estados de terminal. A base pode continuar escura, com contraste alto e leitura confortável.
+
 A narrativa principal é: operação real -> processo -> código -> sistema útil.
 
 O portfólio deve parecer construído por alguém que entende o mundo real antes de automatizá-lo. O visual pode ser divertido, mas precisa continuar profissional. Evite estética hacker caricata. Use terminal como linguagem de interface, não como fantasia.
@@ -33,6 +35,7 @@ Use motion com presença e propósito:
 - Cursor piscando.
 - Janelas com barra superior estilo OS.
 - Terminal Linux interativo, não modal, acionado por botão e por `Ctrl/Cmd+K`.
+- Terminal como janela de desktop, com barra superior, botão de fechar e comportamento arrastável dentro da viewport.
 - Comandos reais de navegação e ação: `help`, `ls`, `go tcc`, `go projetos`, `go hobbies`, `copy email`, `open github`, `download cv`, `clear`.
 - Histórico com setas, autocomplete com Tab e respostas em formato de stdout.
 - Cards que parecem processos abrindo.
@@ -46,11 +49,11 @@ Evite animação que atrapalhe leitura, cause confusão ou pareça decoração s
 
 ## Estrutura Do Portfólio
 
-O portfólio deve conter:
+O portfólio deve ser multi-page, não uma página única longa. A home funciona como desktop/mapa do sistema, e cada assunto abre como uma página própria:
 
-1. Hero em estilo terminal/OS.
-2. História profissional em linha do tempo.
-3. Seção do TCC como projeto em desenvolvimento, com apresentação clara:
+1. `index.html`: home/desktop com hero em estilo terminal/OS e mapa das áreas.
+2. `historia.html`: história profissional em linha do tempo.
+3. `tcc.html`: TCC como projeto em desenvolvimento, com apresentação clara:
    - problema
    - objetivo
    - stack
@@ -58,18 +61,20 @@ O portfólio deve conter:
    - status atual
    - fluxo principal
    - próximos passos
-4. Projetos úteis e funcionais:
+4. `projetos.html`: projetos úteis e funcionais:
    - AI
    - Automação/n8n
    - Website/frontend
-5. Projetos hobby/playgrounds:
+5. `hobbies.html`: projetos hobby/playgrounds:
    - matemática
    - design
    - cibersegurança defensiva
    - marketing
    - investimentos educacionais
-6. Stack técnica.
-7. Contato e currículo.
+6. `stack.html`: stack técnica e habilidades por contexto.
+7. `contato.html`: contato, redes, currículo e chamada profissional.
+
+O terminal deve navegar entre essas páginas com comandos como `go historia`, `go tcc`, `go projetos`, `go hobbies`, `go stack` e `go contato`.
 
 ## Projetos
 

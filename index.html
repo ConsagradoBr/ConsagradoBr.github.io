@@ -4,29 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portfólio terminal de Quésede Filipe Constantino, desenvolvedor em formação com projetos de automação, ERP, front-end e sistemas web.">
-  <title>QFC OS | Quésede Filipe Constantino</title>
+  <title>QFC OS | Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
   <div class="scanlines" aria-hidden="true"></div>
   <header class="site-header" id="top">
-    <a class="brand" href="#top">qfc-os</a>
+    <a class="brand" href="index.html">qfc-os</a>
     <nav aria-label="Principal">
-      <a href="#historia">~/história</a>
-      <a href="#tcc">~/tcc</a>
-      <a href="#projetos">~/projetos</a>
-      <a href="#labs">~/hobbies</a>
-      <a href="#stack">~/stack</a>
-      <a href="#contato">~/contato</a>
+      <a href="historia.html">~/história</a>
+      <a href="tcc.html">~/tcc</a>
+      <a href="projetos.html">~/projetos</a>
+      <a href="hobbies.html">~/hobbies</a>
+      <a href="stack.html">~/stack</a>
+      <a href="contato.html">~/contato</a>
     </nav>
     <div class="header-tools">
       <button class="command-trigger" id="terminalTrigger" type="button" aria-label="Abrir terminal Linux" aria-controls="linuxTerminal" aria-expanded="false">
-        <span>Terminal</span>
-        <kbd>Ctrl</kbd><kbd>K</kbd>
+        <span>Terminal</span><kbd>Ctrl</kbd><kbd>K</kbd>
       </button>
       <a class="header-action" href="assets/docs/curriculo-quesede-filipe-constantino.pdf">cat currículo.pdf</a>
     </div>
@@ -39,15 +38,15 @@
         <div class="boot-strip" aria-label="Sequência de inicialização">
           <span>[ OK ] kernel.qfc</span>
           <span>[ OK ] network.github</span>
-          <span>[ RUN ] career.timeline</span>
+          <span>[ RUN ] desktop.pages</span>
         </div>
-        <p class="eyebrow">qfc@portfolio:~$ ./boot-career.sh</p>
+        <p class="eyebrow">qfc@portfolio:~$ ./start-desktop.sh</p>
         <h1>Quésede<br>Filipe<br>Constantino</h1>
-        <p class="hero-line"><span class="prompt">$</span> <span id="typedCommand">iniciando portfólio...</span><span class="caret"></span></p>
-        <p class="hero-subline">Construo soluções digitais a partir de problemas reais: rotina administrativa, automação, dados e interfaces que precisam funcionar no dia a dia.</p>
+        <p class="hero-line"><span class="prompt">$</span> <span id="typedCommand">npm run portfolio -- --terminal-mode</span><span class="caret"></span></p>
+        <p class="hero-subline">Agora o portfólio funciona como um pequeno sistema: cada área tem sua própria página, e o terminal vira uma janela que você pode arrastar pelo site.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#projetos">./open projetos</a>
-          <a class="button ghost" href="mailto:quesede.filipe@gmail.com">ssh contato@qfc</a>
+          <a class="button primary" href="projetos.html">./open projetos</a>
+          <a class="button ghost" href="tcc.html">./open tcc</a>
         </div>
       </div>
       <aside class="hero-panel terminal-window" aria-label="Resumo profissional">
@@ -57,145 +56,40 @@
         <p id="typedStatus">Automação, front-end e sistemas internos.</p>
         <dl>
           <div><dt>Formação</dt><dd>Técnico em Desenvolvimento de Sistemas, conclusão prevista em dezembro de 2026</dd></div>
-          <div><dt>Experiência</dt><dd>Administração, compras, contratos, financeiro, suporte técnico e processos</dd></div>
+          <div><dt>Base</dt><dd>Administração, compras, contratos, financeiro, suporte técnico e processos</dd></div>
         </dl>
         <div class="terminal-log">
-          <span>&gt; carregando histórias reais</span>
-          <span>&gt; mapeando problemas operacionais</span>
-          <span>&gt; compilando soluções úteis</span>
+          <span>&gt; páginas carregadas</span>
+          <span>&gt; terminal arrastável pronto</span>
+          <span>&gt; paleta azul/roxo ativa</span>
         </div>
       </aside>
     </section>
 
-    <section class="story" id="historia" data-section>
+    <section class="page-shell" aria-label="Mapa do portfólio">
       <div class="section-intro reveal">
-        <p class="eyebrow">01 / História</p>
-        <h2>Uma trajetória feita para conectar operação e software.</h2>
+        <p class="eyebrow">~/desktop</p>
+        <h2>Escolha uma área para abrir.</h2>
       </div>
-      <div class="timeline">
-        <article class="reveal">
-          <span>2018</span>
-          <h3>Ensino Médio completo no UNASP</h3>
-          <p>Base acadêmica concluída em Engenheiro Coelho. O certificado fica como marco de origem, sem expor dados pessoais sensíveis publicamente.</p>
-        </article>
-        <article class="reveal">
-          <span>2020 - 2021</span>
-          <h3>960 horas de voluntariado técnico</h3>
-          <p>Apoio administrativo e técnico na ADRA em contexto humanitário, com demanda real, organização de processos e suporte de informática.</p>
-        </article>
-        <article class="reveal">
-          <span>2021 - 2022</span>
-          <h3>Almoxarifado e operação</h3>
-          <p>Controle de materiais, atividades operacionais e apoio administrativo. A experiência ajudou a enxergar processo antes de escrever código.</p>
-        </article>
-        <article class="reveal">
-          <span>2025</span>
-          <h3>Administração industrial</h3>
-          <p>Compras, contratos, financeiro, estoque, relatórios, Excel avançado e contato com ERP em ambiente de usinagem industrial.</p>
-        </article>
-        <article class="reveal">
-          <span>2024 - 2026</span>
-          <h3>Desenvolvimento de sistemas</h3>
-          <p>HTML, CSS, JavaScript, PHP, Java, Python, SQL, Bash e fundamentos de sistemas aplicados a problemas concretos.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="tcc" id="tcc" data-section>
-      <div class="section-intro reveal">
-        <p class="eyebrow">02 / TCC em desenvolvimento</p>
-        <h2>AMP ERP: sistema para usinagem industrial em fase de polimento de MVP.</h2>
-      </div>
-      <div class="tcc-board">
-        <article class="tcc-terminal terminal-window reveal">
-          <div class="window-bar"><span></span><span></span><span></span><strong>amp-erp.presentation</strong></div>
-          <p class="command">$ npm run build && python backend/app.py</p>
-          <p>ERP web/desktop para empresas de usinagem de pequeno e médio porte, desenvolvido como TCC. O projeto conecta front-end React/Vite com backend Flask, SQLAlchemy, JWT e banco PostgreSQL/Supabase, com fallback SQLite para desenvolvimento.</p>
-          <div class="tcc-actions">
-            <a class="button primary" href="https://github.com/ConsagradoBr/tcc-erp-usinagem" target="_blank" rel="noreferrer">Abrir repositório</a>
-            <a class="button ghost" href="#contato">Apresentar projeto</a>
-          </div>
-        </article>
-        <div class="tcc-modules reveal">
-          <article><span>Auth</span><strong>JWT, cadastro, login e perfil autenticado</strong></article>
-          <article><span>Clientes</span><strong>CRUD, importação NF-e XML/JSON e exportação</strong></article>
-          <article><span>Financeiro</span><strong>Contas, parcelas, juros, baixa e dashboard</strong></article>
-          <article><span>Orçamentos</span><strong>Aprovação gera OS e lançamento financeiro</strong></article>
-          <article><span>OS</span><strong>Quadro por status e mudança rápida de etapa</strong></article>
-          <article><span>Desktop</span><strong>Build com Flask + Waitress + Vite empacotado</strong></article>
-        </div>
-      </div>
-      <div class="flow reveal" aria-label="Fluxo principal do TCC">
-        <span>Cliente</span>
-        <span>Orçamento</span>
-        <span>Aprovação</span>
-        <span>Ordem de serviço</span>
-        <span>Financeiro</span>
-      </div>
-    </section>
-
-    <section class="projects" id="projetos" data-section>
-      <div class="section-intro reveal">
-        <p class="eyebrow">03 / Projetos úteis</p>
-        <h2>Demos funcionais para problemas reais, com repo e Pages.</h2>
-      </div>
-      <div class="project-grid" id="projectGrid"></div>
-    </section>
-
-    <section class="labs" id="labs" data-section>
-      <div class="section-intro reveal">
-        <p class="eyebrow">04 / Hobbies de programador</p>
-        <h2>Pequenos consoles para brincar, aprender e mostrar curiosidade técnica.</h2>
-      </div>
-      <div class="project-grid lab-grid" id="labGrid"></div>
-    </section>
-
-    <section class="stack" id="stack" data-section>
-      <div class="section-intro reveal">
-        <p class="eyebrow">05 / Stack</p>
-        <h2>Ferramentas usadas para transformar rotina em sistema.</h2>
-      </div>
-      <div class="stack-grid">
-        <article class="reveal"><strong>Front-end</strong><span>HTML, CSS, JavaScript, Tailwind CSS, responsividade e interações.</span></article>
-        <article class="reveal"><strong>Back-end e dados</strong><span>Python, PHP, Java, SQL, MySQL, APIs e automações.</span></article>
-        <article class="reveal"><strong>Operação</strong><span>Excel avançado, ERP, compras, contratos, financeiro e estoque.</span></article>
-        <article class="reveal"><strong>Ferramentas</strong><span>Git, GitHub, Bash, n8n, VS Code, Figma/FigJam, Photoshop e CorelDRAW.</span></article>
-      </div>
-    </section>
-
-    <section class="contact" id="contato" data-section>
-      <div class="contact-copy reveal">
-        <p class="eyebrow">06 / Contato</p>
-        <h2>Vamos construir algo que pareça simples por fora e resolva trabalho de verdade.</h2>
-      </div>
-      <div class="contact-links reveal">
-        <a href="mailto:quesede.filipe@gmail.com"><span>Email</span>quesede.filipe@gmail.com</a>
-        <a href="tel:+5519997287737"><span>Telefone</span>(19) 99728-7737</a>
-        <a href="https://www.linkedin.com/in/srconsagrado/" target="_blank" rel="noreferrer"><span>LinkedIn</span>/in/srconsagrado</a>
-        <a href="https://github.com/ConsagradoBr" target="_blank" rel="noreferrer"><span>GitHub</span>/ConsagradoBr</a>
-        <a href="https://www.instagram.com/constantino_pkn/" target="_blank" rel="noreferrer"><span>Instagram</span>@constantino_pkn</a>
+      <div class="page-nav-grid">
+        <a class="page-card reveal" href="historia.html"><span>01</span><strong>História</strong><p>Trajetória profissional organizada em fases.</p><code>cd historia/</code></a>
+        <a class="page-card reveal" href="tcc.html"><span>02</span><strong>TCC</strong><p>Apresentação do ERP para usinagem industrial.</p><code>cd tcc/</code></a>
+        <a class="page-card reveal" href="projetos.html"><span>03</span><strong>Projetos úteis</strong><p>Demos funcionais com repo e GitHub Pages.</p><code>cd projetos/</code></a>
+        <a class="page-card reveal" href="hobbies.html"><span>04</span><strong>Hobbies</strong><p>Playgrounds para brincar de programador.</p><code>cd hobbies/</code></a>
+        <a class="page-card reveal" href="stack.html"><span>05</span><strong>Stack</strong><p>Ferramentas e habilidades por contexto.</p><code>cd stack/</code></a>
+        <a class="page-card reveal" href="contato.html"><span>06</span><strong>Contato</strong><p>Email, redes e currículo.</p><code>ssh contato@qfc</code></a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <span>qfc-os portfolio</span>
-    <span>shutdown -h later | © 2026 Quésede Filipe Constantino</span>
-  </footer>
+  <footer><span>qfc-os portfolio</span><span>shutdown -h later | © 2026 Quésede Filipe Constantino</span></footer>
 
   <section class="linux-terminal terminal-window" id="linuxTerminal" aria-label="Terminal de comandos do portfólio" hidden>
-    <div class="window-bar">
-      <span></span><span></span><span></span><strong>qfc@portfolio:~</strong>
-      <button id="terminalClose" type="button" aria-label="Fechar terminal">×</button>
-    </div>
+    <div class="window-bar"><span></span><span></span><span></span><strong>qfc@portfolio:~</strong><button id="terminalClose" type="button" aria-label="Fechar terminal">×</button></div>
     <div class="terminal-output" id="terminalOutput" aria-live="polite"></div>
-    <form class="terminal-input-line" id="terminalForm">
-      <label for="terminalInput">qfc@portfolio:~$</label>
-      <input id="terminalInput" type="text" autocomplete="off" spellcheck="false" placeholder="digite help">
-    </form>
+    <form class="terminal-input-line" id="terminalForm"><label for="terminalInput">qfc@portfolio:~$</label><input id="terminalInput" type="text" autocomplete="off" spellcheck="false" placeholder="digite help"></form>
   </section>
   <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-
   <script src="assets/js/main.js"></script>
 </body>
 </html>
